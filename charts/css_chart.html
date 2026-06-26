@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-0160c7c97b84aa7ad887fab13e6b6da9"}, "mark": {"type": "line"}, "encoding": {"tooltip": [{"field": "Year", "type": "ordinal"}, {"field": "Value", "title": "Rate (%)", "type": "quantitative"}], "x": {"axis": {"labelAngle": -360, "values": [1965, 1975, 1985, 1995, 2005, 2015, 2024]}, "field": "Year", "type": "ordinal"}, "y": {"field": "Value", "title": "Caloric self-sufficiency rate (%)", "type": "quantitative"}}, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-0160c7c97b84aa7ad887fab13e6b6da9": [{"Year": 1965, "Value": 73}, {"Year": 1966, "Value": 68}, {"Year": 1967, "Value": 66}, {"Year": 1968, "Value": 65}, {"Year": 1969, "Value": 62}, {"Year": 1970, "Value": 60}, {"Year": 1971, "Value": 58}, {"Year": 1972, "Value": 57}, {"Year": 1973, "Value": 55}, {"Year": 1974, "Value": 55}, {"Year": 1975, "Value": 54}, {"Year": 1976, "Value": 53}, {"Year": 1977, "Value": 53}, {"Year": 1978, "Value": 54}, {"Year": 1979, "Value": 54}, {"Year": 1980, "Value": 53}, {"Year": 1981, "Value": 52}, {"Year": 1982, "Value": 53}, {"Year": 1983, "Value": 52}, {"Year": 1984, "Value": 53}, {"Year": 1985, "Value": 53}, {"Year": 1986, "Value": 51}, {"Year": 1987, "Value": 50}, {"Year": 1988, "Value": 50}, {"Year": 1989, "Value": 49}, {"Year": 1990, "Value": 48}, {"Year": 1991, "Value": 46}, {"Year": 1992, "Value": 46}, {"Year": 1993, "Value": 37}, {"Year": 1994, "Value": 46}, {"Year": 1995, "Value": 43}, {"Year": 1996, "Value": 42}, {"Year": 1997, "Value": 41}, {"Year": 1998, "Value": 40}, {"Year": 1999, "Value": 40}, {"Year": 2000, "Value": 40}, {"Year": 2001, "Value": 40}, {"Year": 2002, "Value": 40}, {"Year": 2003, "Value": 40}, {"Year": 2004, "Value": 40}, {"Year": 2005, "Value": 40}, {"Year": 2006, "Value": 39}, {"Year": 2007, "Value": 40}, {"Year": 2008, "Value": 41}, {"Year": 2009, "Value": 40}, {"Year": 2010, "Value": 39}, {"Year": 2011, "Value": 39}, {"Year": 2012, "Value": 39}, {"Year": 2013, "Value": 39}, {"Year": 2014, "Value": 39}, {"Year": 2015, "Value": 39}, {"Year": 2016, "Value": 38}, {"Year": 2017, "Value": 38}, {"Year": 2018, "Value": 37}, {"Year": 2019, "Value": 38}, {"Year": 2020, "Value": 37}, {"Year": 2021, "Value": 38}, {"Year": 2022, "Value": 38}, {"Year": 2023, "Value": 38}, {"Year": 2024, "Value": 38}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
