@@ -876,22 +876,63 @@ Return to [[Food and nutrition policies]]
 ---
 
 References:
-</tw-passagedata><tw-passagedata pid="53" name="OpenSeadragon Test" tags="" position="0,0" size="100,100">&lt;div id=&quot;openseadragon-viewer&quot;
-     style=&quot;width:100%; height:800px; border:1px solid #ccc;&quot;&gt;
-&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="53" name="OpenSeadragon Test" tags="" position="450,325" size="100,100">&lt;div id=&quot;openseadragon-viewer&quot; style=&quot;width:100%;height:750px;border:1px solid #ccc;&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;setTimeout(function(){var imageUrl=&quot;images/systemsmap.svg&quot;;if(location.protocol===&quot;file:&quot;){imageUrl=&quot;file:///C:/Twine/images/systemsmap.svg&quot;;}
+
+var viewer=OpenSeadragon({id:&quot;openseadragon-viewer&quot;,prefixUrl:&quot;https://cdnjs.cloudflare.com/ajax/libs/openseadragon/5.0.1/images/&quot;,tileSources:{type:&quot;image&quot;,url:imageUrl}});
+
+viewer.addHandler(&quot;open&quot;,function(){
+
+var hotspot1=document.createElement(&quot;div&quot;);hotspot1.style.cssText=&quot;background:transparent;width:100%;height:100%;cursor:pointer;&quot;;
+viewer.addOverlay({element:hotspot1,location:new OpenSeadragon.Rect(0.168,0.148,0.045,0.028)});
+new OpenSeadragon.MouseTracker({element:hotspot1,clickHandler:function(){document.getElementById(&quot;gotoSocio&quot;).click();}});
+
+var hotspot2=document.createElement(&quot;div&quot;);hotspot2.style.cssText=&quot;background:transparent;width:100%;height:100%;cursor:pointer;&quot;;
+viewer.addOverlay({element:hotspot2,location:new OpenSeadragon.Rect(0.362,0.188,0.086,0.032)});
+new OpenSeadragon.MouseTracker({element:hotspot2,clickHandler:function(){document.getElementById(&quot;gotoFood&quot;).click();}});
+
+});
+
+},1000);&lt;/script&gt;
+
+&lt;button id=&quot;gotoSocio&quot; onclick=&quot;document.querySelector(&#39;#socioLink tw-link&#39;).click();&quot; style=&quot;display:none;&quot;&gt;&lt;/button&gt;
+&lt;button id=&quot;gotoFood&quot; onclick=&quot;document.querySelector(&#39;#foodLink tw-link&#39;).click();&quot; style=&quot;display:none;&quot;&gt;&lt;/button&gt;
+
+&lt;div id=&quot;socioLink&quot;&gt;[[Socioeconomic and demographic drivers]]&lt;/div&gt;
+&lt;div id=&quot;foodLink&quot;&gt;[[Food self-sufficiency and food security]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="OpenSeadragon coordinates" tags="" position="425,300" size="100,100">&lt;div id=&quot;openseadragon-viewer&quot; style=&quot;width:100%;height:750px;border:1px solid #ccc;&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
-setTimeout(function () {
-    OpenSeadragon({
-        id: &quot;openseadragon-viewer&quot;,
-        prefixUrl: &quot;https://cdnjs.cloudflare.com/ajax/libs/openseadragon/5.0.1/images/&quot;,
-        tileSources: {
-            type: &#39;image&#39;,
-            url: &#39;images/systemsmap.svg&#39;
-        }
+setTimeout(function(){
+
+    var imageUrl=location.protocol===&quot;file:&quot;
+        ?&quot;file:///C:/Twine/images/systemsmap.svg&quot;
+        :&quot;images/systemsmap.svg&quot;;
+
+    var viewer=OpenSeadragon({
+        id:&quot;openseadragon-viewer&quot;,
+        prefixUrl:&quot;https://cdnjs.cloudflare.com/ajax/libs/openseadragon/5.0.1/images/&quot;,
+        tileSources:{type:&quot;image&quot;,url:imageUrl}
     });
-}, 1000);
-&lt;/script&gt;</tw-passagedata></tw-storydata>
+
+    viewer.addHandler(&quot;open&quot;,function(){
+
+        viewer.addHandler(&quot;canvas-click&quot;,function(event){
+
+            var p=viewer.viewport.pointFromPixel(event.position);
+
+            prompt(
+                &quot;Copy these coordinates:&quot;,
+                p.x.toFixed(3)+&quot;, &quot;+p.y.toFixed(3)
+            );
+
+        });
+
+    });
+
+},1000);
+&lt;/script&gt;
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
