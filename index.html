@@ -14,7 +14,9 @@
   color:black;
   font-family:arial;
   font-size:16px;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Environmental impacts of food production" tags="" position="325,300" size="100,100">(text-style:&quot;bold&quot;)[Environmental impacts of food production]
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">var script = document.createElement('script');
+script.src = 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/5.0.1/openseadragon.min.js';
+document.head.appendChild(script);</script><tw-passagedata pid="1" name="Environmental impacts of food production" tags="" position="325,300" size="100,100">(text-style:&quot;bold&quot;)[Environmental impacts of food production]
 
 Animal-source foods are more resource intensive than plant-based foods and the livestock sector contributes a disproportionate share to the environmental impacts of food production. Given projected population increase and current demand for meat, technological measures to increase efficiency alone are unlikely to mitigate impacts to a sustainable level. Supply-side changes must be accompanied with demand-side shifts to plant-based diets if humanity is to remain in a safe operating space.
 
@@ -475,7 +477,7 @@ References:
 * Tsutsui WM. Modern Japanese Fisheries and the Global Seafood Market. In: Ludden D, editor. Oxford Research Encyclopedia of Asian History. New York: Oxford Academic; 2023.
 * Cwiertka KJ. Chapter 1 Western Food, Politics and Fashion; The West, the Emperor and the Meat-Eating Taboo.  Modern Japanese Cuisine. London: Reaktion Books; 2006. p. 24-34.</tw-passagedata><tw-passagedata pid="27" name="Meat consumption in Japan" tags="" position="475,350" size="100,100">&lt;span style=&quot;font-size: 200%; font-weight: bold;&quot;&gt;Meat consumption in Japan&lt;/span&gt;
 
-[[SVG Test]] 
+[[OpenSeadragon Test]] 
 
 Animal-source foods are more resource intensive than plant-based foods and the livestock sector contributes a disproportionate share to the [[environmental impacts of food production|Environmental impacts of food production]]. Given projected population increase and current demand for meat, technological measures to increase efficiency alone are unlikely to mitigate impacts to a sustainable level. Supply-side changes must be accompanied with demand-side shifts to plant-based diets if humanity is to remain in a safe operating space. Eating too much meat, especially red and processed meat, is also considered [[harmful to human health|Meat consumption and health]].
 
@@ -874,26 +876,18 @@ Return to [[Food and nutrition policies]]
 ---
 
 References:
-</tw-passagedata><tw-passagedata pid="53" name="SVG Test" tags="" position="0,0" size="100,100">&lt;object id=&quot;systemsMap&quot;
-        data=&quot;images/systemsmap.svg&quot;
-        type=&quot;image/svg+xml&quot;
-        width=&quot;100%&quot;
-        height=&quot;800&quot;&gt;
-&lt;/object&gt;
+</tw-passagedata><tw-passagedata pid="53" name="OpenSeadragon Test" tags="" position="0,0" size="100,100">&lt;div id=&quot;openseadragon-viewer&quot;
+     style=&quot;width:100%; height:800px; border:1px solid #ccc;&quot;&gt;
+&lt;/div&gt;
 
 &lt;script&gt;
 setTimeout(function () {
-    const obj = document.getElementById(&#39;systemsMap&#39;);
-
-    obj.addEventListener(&#39;load&#39;, function () {
-        const svgDoc = obj.contentDocument;
-
-        svgPanZoom(svgDoc.querySelector(&#39;svg&#39;), {
-            zoomEnabled: true,
-            controlIconsEnabled: true,
-            fit: true,
-            center: true
-        });
+    OpenSeadragon({
+        id: &quot;openseadragon-viewer&quot;,
+        tileSources: {
+            type: &#39;image&#39;,
+            url: &#39;images/systemsmap.svg&#39;
+        }
     });
 }, 1000);
 &lt;/script&gt;</tw-passagedata></tw-storydata>
