@@ -481,9 +481,11 @@ However, meat consumption in Japan [[continues to increase|Meat consumption tren
 
 Click on the diagram to explore how different factors interact in the story of meat consumption in Japan.
 
-
-&lt;img src=&quot;images/systemsmap.jpg&quot; onerror=&quot;this.onerror=null; this.src=&#39;file:///C:/Twine/images/systemsmap.jpg&#39;;&quot; width=&quot;100%&quot;&gt;
-
+&lt;object
+    data=&quot;images/systemsmap.svg&quot;
+    type=&quot;image/svg+xml&quot;
+    onerror=&quot;this.onerror=null; this.data=&#39;file:///C:/Twine/images/systemsmap.svg&#39;;&quot;&gt;
+&lt;/object&gt;
 
 The main objective of this resource is to take a [[food systems approach|Food systems approach]] to tell the story of meat consumption in Japan and prompt conversations on the role that animal-source foods play in Japanese diets and the need for dietary shifts and a food system transformation that puts human and planetary health first. Many of the data visualisations are interactive and can be explored by hovering and clicking. This website was created by Waka Shibata in August 2026 as part of the requirements of a Master of Science in Planetary Health at the Edinburgh Futures Institute, University of Edinburgh. References are listed at the bottom of each page and I am responsible for any errors.
 
@@ -841,14 +843,16 @@ Read about [[meat consumption trends in Japan|Meat consumption trends in Japan]]
 
 References:</tw-passagedata><tw-passagedata pid="51" name="Healthy and sustainable Japanese diet" tags="" position="675,550" size="100,100">(text-style:&quot;bold&quot;)[Healthy and sustainable Japanese diet that is fit for the 21st century]
 
-Many diets can be healthy and sustainable. Here are some suggestions for healthy and sustainable Japanese diets that could be explored in more detail and some considerations.
-* 1980s Japanese diet with sustainable seafood: Similar to the [[Japanese dietary lifestyle]] currently promoted by the MAFF with the caveat that the seafood is to be sustainably sourced. The current Japanese dietary lifestyle is vague but there would need to be more explicit recommendations on meat and seafood intake levels. The largest hurdle with this diet is that with [[current seafood production|The decline of the fishing industry]], this diet could be unaccessible and [[unaffordable|Price of fish and meat]] to many. Of course, a shift in desired and commonly consumed seafood types could affect accessibility and affordability.
+Many diets can be healthy and sustainable. The WHO and FAO have produced guidelines on healthy and sustainable diets.
+
+Here are some suggestions for healthy and sustainable Japanese diets that could be explored in more detail and considerations for each of them.
+* 1980s Japanese diet with reduced salt and sustainable seafood: Similar to the [[Japanese dietary lifestyle]] currently promoted by the MAFF with the caveats about reduced salt and sustainable seafood. The currently advocated Japanese dietary lifestyle is vague but there would need to be more explicit recommendations on meat and seafood intake levels. The largest hurdle with this diet is that with [[current seafood production|The decline of the fishing industry]], this diet could be unaccessible and [[unaffordable|Price of fish and meat]] to many. Of course, a shift in desired and commonly consumed seafood types could affect accessibility and affordability.
 * Japanese pescatarian diet with sustainable seafood: A diet that removes meat but includes sustainably sourced seafood. The obstacles are similar to the 1980s Japanese diet with sustainable seafood.
-* Japanese flexitarian diet: An omnivorous diet with reduced animal-source food consumption. The diet could be based on the EAT-Lanct recommendations and adjusted for cultural acceptibility. As the Japanese have a tradition of eating soy products, protein needs are likely to be met, but the intake of micronutrients will need to be analysed. Nuts and seeds are not frequently consumed or abundantly produced in Japan, so there would be implications for food self-sufficiency and cost.
-* Japanese vegetarian or vegan diet: Largely unexplored territory in Japan. Dashi, traditional Japanese broth, uses fish and is extremely commonly used in Japanese cuisine, even in dishes that may seem vegetarian. Leaning on religious traditions such as shōjin-ryori (精進料理) could provide ideas. With current food environments, this diet would be more difficult and require planning and resources for an individual to realise. Again, there would be implications for micronutrient intake. Not likely to become mainstream, but research into such diets can inform flexitarian diets.
+* Japanese flexitarian diet: An omnivorous diet with reduced animal-source food consumption. The diet could be based on the EAT-Lanct recommendations and adjusted for cultural acceptibility. As the Japanese have a tradition of eating soy products, protein needs are less likely to be an issue, but the intake of micronutrients will need to be analysed. Nuts and seeds are not frequently consumed or abundantly produced in Japan, so there would be implications for food self-sufficiency and cost.
+* Japanese vegetarian or vegan diet: Largely unexplored territory in Japan. Dashi, traditional Japanese broth, uses fish and is extremely commonly used in Japanese cuisine, even in dishes that may seem vegetarian. Leaning on religious traditions such as shōjin-ryori (精進料理) could provide ideas. Again, there would be implications for micronutrient intake. With current food environments, adhering strictly to this diet would be more difficult and require planning and resources for an individual to realise. Not likely to become mainstream, but could be incoporated into other diets and research will be informative.
 
 
-I have focused on the animal-source foods in diets, but a common characteristic of all these diets should be a basis of [[whole grains|Brown rice]], and an abundance and variety of vegetables and fruits. There is a lot of work for nutritionists, dieticians and culinary experts to do and it is clear that the sustainability of fisheries have to be improved and seafood preferences would need to shift.
+I have focused on the animal-source foods in diets, but a common characteristic of all these diets should be a basis of [[whole grains|Brown rice]], and an abundance and variety of vegetables and fruits. There is a lot of work for nutritionists, dieticians and culinary experts to do and it is clear that the sustainability of fisheries have to be improved and seafood preferences would probabaly need to shift.
 
 When healthy and sustainable Japanese diets that are fit for the 21st century have been imagined and defined, it will enable the next step of figuring out how food production and supply systems and food environments can be transformed to enable these diets for all Japanese people.
 
@@ -872,7 +876,18 @@ Return to [[Food and nutrition policies]]
 ---
 
 References:
-</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="53" name="Test1" tags="" position="0,0" size="100,100">&lt;embed id=&quot;systemsMap&quot;
+       src=&quot;images/systemsmap.svg&quot;
+       type=&quot;image/svg+xml&quot;
+       width=&quot;100%&quot;
+       height=&quot;800&quot;&gt;</tw-passagedata><tw-passagedata pid="54" name="Test2" tags="" position="0,125" size="100,100">&lt;button onclick=&quot;
+fetch(&#39;images/systemsmap.svg&#39;)
+  .then(r =&gt; r.text())
+  .then(t =&gt; alert(&#39;SVG loaded&#39;))
+  .catch(e =&gt; alert(&#39;Failed&#39;));
+&quot;&gt;
+Test SVG Load
+&lt;/button&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
