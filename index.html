@@ -961,6 +961,18 @@ var hotspot31=document.createElement(&quot;div&quot;);hotspot31.style.cssText=&q
 viewer.addOverlay({element:hotspot31,location:new OpenSeadragon.Rect(0.39,0.017,0.065,0.024)});
 new OpenSeadragon.MouseTracker({element:hotspot31,clickHandler:function(){document.getElementById(&quot;gotoTrade&quot;).click();}});
 
+var hotspot32=document.createElement(&quot;div&quot;);hotspot32.style.cssText=&quot;background:transparent;width:100%;height:100%;cursor:pointer;&quot;;
+viewer.addOverlay({element:hotspot32,location:new OpenSeadragon.Rect(0.7,0.262,0.073,0.042)});
+new OpenSeadragon.MouseTracker({element:hotspot32,clickHandler:function(){document.getElementById(&quot;gotoFishing&quot;).click();}});
+
+var hotspot33=document.createElement(&quot;div&quot;);hotspot33.style.cssText=&quot;background:transparent;width:100%;height:100%;cursor:pointer;&quot;;
+viewer.addOverlay({element:hotspot33,location:new OpenSeadragon.Rect(0.567,0.195,0.068,0.019)});
+new OpenSeadragon.MouseTracker({element:hotspot33,clickHandler:function(){document.getElementById(&quot;gotoSeafood&quot;).click();}});
+
+var hotspot34=document.createElement(&quot;div&quot;);hotspot34.style.cssText=&quot;background:transparent;width:100%;height:100%;cursor:pointer;&quot;;
+viewer.addOverlay({element:hotspot34,location:new OpenSeadragon.Rect(0.61,0.227,0.059,0.031)});
+new OpenSeadragon.MouseTracker({element:hotspot34,clickHandler:function(){document.getElementById(&quot;gotoSeafood&quot;).click();}});
+
 });
 
 },1000);&lt;/script&gt;
@@ -968,9 +980,11 @@ The need for a dietary shift towards reduced meat consumption and a more plant-b
 
 ---
 
+&lt;span style=&quot;font-size: 150%; font-weight: bold;&quot;&gt;About this resource&lt;/span&gt;
+
 The main objective of this resource is to take a [[food systems approach|Food systems approach]] to tell the story of meat consumption in contemporary Japan using data and prompt conversations on the role that animal-source foods play in Japanese diets and the need for dietary shifts and a food system transformation that puts human and planetary health first. 
 
-This resource is interactive and non-linear. You can navigate using the arrows that appear on the upper left hand part of your page, but if you get lost, scroll to the bottom of the page and you will find a &quot;Return to overview&quot; link that will bring you back to this page. This resource was created using Twine. Most of the data visualisations, which were created using Python, are interactive and can be explored by hovering and clicking. Clicking on variables within the legend often enables you to highlight that variable. Clicking anywhere on the chart returns it to the original view. With figures that have multiple charts it&#39;s a bit tricky and you have to click within the figure area but outside the chart areas.
+This is a non-linear and interactive resource created using Twine. You can navigate using the arrows that appear on the upper left hand part of your page, but if you get lost, scroll to the bottom of the page and you will find a &quot;Return to overview&quot; link that will bring you back to this page. Most of the data visualisations are interactive and can be explored by hovering and clicking. Clicking on variables within the legend often enables you to highlight that variable. Clicking anywhere on the chart returns it to the original view. With figures that have multiple charts it&#39;s a bit tricky and you have to click within the figure area but outside the chart areas.
 
 This resource was created by Waka Shibata in August 2026 as part of the requirements of a Master of Science in Planetary Health at the Edinburgh Futures Institute, University of Edinburgh. References are listed at the bottom of each page and I am responsible for any errors.
 
@@ -980,7 +994,6 @@ References:
 * Rockström J, Thilsted SH, Willett WC, Gordon LJ, Herrero M, Hicks CC, et al. The EAT–Lancet Commission on healthy, sustainable, and just food systems. The Lancet. 2025;406:1625-700. &lt;a href=&quot;https://doi.org/10.1016/s0140-6736(25)01201-2&quot; target=&quot;_blank&quot;&gt;https://doi.org/10.1016/s0140-6736(25)01201-2&lt;/a&gt;
 * The Global Alliance for Improved Nutrition (GAIN), The Columbia Climate School, Cornell University College of Agriculture and Life Sciences. The Food Systems Dashboard, About Food Systems. &lt;a href=&quot;https://www.foodsystemsdashboard.org/information/about-food-systems&quot; target=&quot;_blank&quot;&gt;https://www.foodsystemsdashboard.org/information/about-food-systems&lt;/a&gt;
 * Twine &lt;a href=&quot;https://twinery.org/&quot; target=&quot;_blank&quot;&gt;https://twinery.org/&lt;/a&gt;
-* Python &lt;a href=&quot;https://www.python.org/&quot; target=&quot;_blank&quot;&gt;https://www.python.org/&lt;/a&gt;
 
 &lt;button id=&quot;gotoSocio&quot; onclick=&quot;document.querySelector(&#39;#socioLink tw-link&#39;).click();&quot; style=&quot;display:none;&quot;&gt;&lt;/button&gt;
 &lt;button id=&quot;gotoFood&quot; onclick=&quot;document.querySelector(&#39;#foodLink tw-link&#39;).click();&quot; style=&quot;display:none;&quot;&gt;&lt;/button&gt;
@@ -994,6 +1007,7 @@ References:
 &lt;button id=&quot;gotoIndividual&quot; onclick=&quot;document.querySelector(&#39;#individualLink tw-link&#39;).click();&quot; style=&quot;display:none;&quot;&gt;&lt;/button&gt;
 &lt;button id=&quot;gotoMeat&quot; onclick=&quot;document.querySelector(&#39;#meatLink tw-link&#39;).click();&quot; style=&quot;display:none;&quot;&gt;&lt;/button&gt;
 &lt;button id=&quot;gotoTrade&quot; onclick=&quot;document.querySelector(&#39;#tradeLink tw-link&#39;).click();&quot; style=&quot;display:none;&quot;&gt;&lt;/button&gt;
+&lt;button id=&quot;gotoSeafood&quot; onclick=&quot;document.querySelector(&#39;#seafoodLink tw-link&#39;).click();&quot; style=&quot;display:none;&quot;&gt;&lt;/button&gt;
 
 &lt;div id=&quot;socioLink&quot;&gt;[[ |Socioeconomic and demographic drivers]]&lt;/div&gt;
 &lt;div id=&quot;foodLink&quot;&gt;[[ |Food self-sufficiency]]&lt;/div&gt;
@@ -1007,6 +1021,7 @@ References:
 &lt;div id=&quot;individualLink&quot;&gt;[[ |Individual factors]]&lt;/div&gt;
 &lt;div id=&quot;meatLink&quot;&gt;[[ |Meat consumption trends in Japan]]&lt;/div&gt;
 &lt;div id=&quot;tradeLink&quot;&gt;[[ |Trade and protection of domestic agriculture]]&lt;/div&gt;
+&lt;div id=&quot;seafoodLink&quot;&gt;[[ |Seafood imports]]&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="28" name="1985 Dietary Guidelines" tags="" position="775,700" size="100,100">(text-style:&quot;bold&quot;)[1985 Dietary Guidelines]
 
 The first Dietary Guideline (DG)s for Japanese were developed in 1985 by the Ministry of Health, Labour and Welfare (MHLW). They do not specifically mention the [[Japanese dietary lifestyle|Japanese dietary pattern]], but they do recommend a three-dish meal pattern. They bring up [[home-cooking and emphasize the value of family meals|Home-cooking, multiculturalism, and the role of women]].
@@ -1571,6 +1586,19 @@ var hotspot31=document.createElement(&quot;div&quot;);hotspot31.style.cssText=&q
 viewer.addOverlay({element:hotspot31,location:new OpenSeadragon.Rect(0.39,0.017,0.065,0.024)});
 new OpenSeadragon.MouseTracker({element:hotspot31,clickHandler:function(){document.getElementById(&quot;gotoTrade&quot;).click();}});
 
+var hotspot32=document.createElement(&quot;div&quot;);hotspot32.style.cssText=&quot;background:transparent;width:100%;height:100%;cursor:pointer;&quot;;
+viewer.addOverlay({element:hotspot32,location:new OpenSeadragon.Rect(0.7,0.262,0.073,0.042)});
+new OpenSeadragon.MouseTracker({element:hotspot32,clickHandler:function(){document.getElementById(&quot;gotoFishing&quot;).click();}});
+
+var hotspot33=document.createElement(&quot;div&quot;);hotspot33.style.cssText=&quot;background:transparent;width:100%;height:100%;cursor:pointer;&quot;;
+viewer.addOverlay({element:hotspot33,location:new OpenSeadragon.Rect(0.567,0.195,0.068,0.019)});
+new OpenSeadragon.MouseTracker({element:hotspot33,clickHandler:function(){document.getElementById(&quot;gotoSeafood&quot;).click();}});
+
+var hotspot34=document.createElement(&quot;div&quot;);hotspot34.style.cssText=&quot;background:transparent;width:100%;height:100%;cursor:pointer;&quot;;
+viewer.addOverlay({element:hotspot34,location:new OpenSeadragon.Rect(0.61,0.227,0.059,0.031)});
+new OpenSeadragon.MouseTracker({element:hotspot34,clickHandler:function(){document.getElementById(&quot;gotoSeafood&quot;).click();}});
+
+
 });
 
 },1000);&lt;/script&gt;
@@ -1587,7 +1615,7 @@ new OpenSeadragon.MouseTracker({element:hotspot31,clickHandler:function(){docume
 &lt;button id=&quot;gotoIndividual&quot; onclick=&quot;document.querySelector(&#39;#individualLink tw-link&#39;).click();&quot; style=&quot;display:none;&quot;&gt;&lt;/button&gt;
 &lt;button id=&quot;gotoMeat&quot; onclick=&quot;document.querySelector(&#39;#meatLink tw-link&#39;).click();&quot; style=&quot;display:none;&quot;&gt;&lt;/button&gt;
 &lt;button id=&quot;gotoTrade&quot; onclick=&quot;document.querySelector(&#39;#tradeLink tw-link&#39;).click();&quot; style=&quot;display:none;&quot;&gt;&lt;/button&gt;
-
+&lt;button id=&quot;gotoSeafood&quot; onclick=&quot;document.querySelector(&#39;#seafoodLink tw-link&#39;).click();&quot; style=&quot;display:none;&quot;&gt;&lt;/button&gt;
 
 &lt;div id=&quot;socioLink&quot;&gt;[[ |Socioeconomic and demographic drivers]]&lt;/div&gt;
 &lt;div id=&quot;foodLink&quot;&gt;[[ |Food self-sufficiency]]&lt;/div&gt;
@@ -1601,6 +1629,7 @@ new OpenSeadragon.MouseTracker({element:hotspot31,clickHandler:function(){docume
 &lt;div id=&quot;individualLink&quot;&gt;[[ |Individual factors]]&lt;/div&gt;
 &lt;div id=&quot;meatLink&quot;&gt;[[ |Meat consumption trends in Japan]]&lt;/div&gt;
 &lt;div id=&quot;tradeLink&quot;&gt;[[ |Trade and protection of domestic agriculture]]&lt;/div&gt;
+&lt;div id=&quot;seafoodLink&quot;&gt;[[ |Seafood imports]]&lt;/div&gt;
 
 
 
